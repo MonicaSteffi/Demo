@@ -30,8 +30,7 @@ class PersonController {
         Workbook workbook = Workbook.getWorkbook(file.getInputStream());
         Sheet sheet = workbook.getSheet(0);
 
-        // skip first row (row 0) by starting from 1
-        for (int row = 1; row < sheet.getRows(); row++) {
+           for (int row = 1; row < sheet.getRows(); row++) {
             LabelCell mirId = sheet.getCell(COLUMN_MIRID, row)
             LabelCell cancer = sheet.getCell(COLUMN_CANCER, row)
             LabelCell profile = sheet.getCell(COLUMN_PROFILE, row)
